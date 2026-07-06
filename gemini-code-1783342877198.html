@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delights Cake Shop</title>
+    <style>
+        /* General Styles and Dynamic Pink/Blue Background */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffdee9 0%, #b5fffc 100%);
+            background-attachment: fixed;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ff6b81;
+            font-weight: bold;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #48dbfb;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #ff4757;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #57606f;
+        }
+
+        /* Content Sections */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #ff4757;
+            border-bottom: 2px solid #48dbfb;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Flavors Grid (Clickable Cards) */
+        .flavor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .flavor-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            border: 2px solid transparent;
+        }
+
+        /* Dynamic Clickable Background Effect (Pink & Blue) */
+        .flavor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .flavor-card:active {
+            transform: scale(0.98);
+        }
+
+        /* Give alternate cards pink/blue click accents */
+        .flavor-card.pink-click:active {
+            background-color: #ffdee9;
+            border-color: #ff6b81;
+        }
+
+        .flavor-card.blue-click:active {
+            background-color: #b5fffc;
+            border-color: #48dbfb;
+        }
+
+        .flavor-card h3 {
+            margin: 10px 0;
+            color: #2f3542;
+        }
+
+        /* Contact Button */
+        .btn-contact {
+            display: inline-block;
+            background-color: #ff6b81;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(255, 107, 129, 0.4);
+        }
+
+        .btn-contact:hover {
+            background-color: #48dbfb;
+            box-shadow: 0 4px 10px rgba(72, 219, 251, 0.4);
+        }
+
+        .btn-contact:active {
+            transform: scale(0.95);
+        }
+
+        footer {
+            margin-top: 5px;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #747d8c;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#quality">Best Quality</a>
+            <a href="#flavors">Flavors</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Cake Shop Name) -->
+    <div class="hero">
+        <h1>Sweet Delights</h1>
+        <p>Baking your dreams come true, one slice at a time.</p>
+    </div>
+
+    <div class="container">
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to <strong>Sweet Delights</strong>! We are a passionate, family-owned bakery dedicated to crafting the most delicious and beautiful cakes for your special moments. Every cake is baked fresh from scratch using traditional recipes and a modern touch of love.</p>
+        </section>
+
+        <!-- Best Quality Section -->
+        <section id="quality">
+            <h2>Our Best Quality Guarantee</h2>
+            <p>We believe that a great cake starts with premium ingredients. That is why we commit to:</p>
+            <p style="max-width: 600px; margin: 0 auto 15px auto; text-align: left; line-height: 1.6;">
+                ✨ 100% Organic & fresh dairy products<br>
+                ✨ No artificial preservatives or additives<br>
+                ✨ Hand-crafted designs customized to perfection<br>
+                ✨ Baked fresh on the day of delivery
+            </p>
+        </section>
+
+        <!-- Cake Flavors Section (Clickable) -->
+        <section id="flavors">
+            <h2>Our Signature Flavors</h2>
+            <p><em>Click on a flavor card below to select your favorite!</em></p>
+            
+            <div class="flavor-grid">
+                <!-- Card 1 (Pink Click Accent) -->
+                <div class="flavor-card pink-click" onclick="alert('You selected: Classic Strawberry Vanilla!')">
+                    <h3>🍓 Strawberry Vanilla</h3>
+                    <p>Layers of fluffy vanilla sponge filled with fresh strawberry compote and light whipped cream.</p>
+                </div>
+
+                <!-- Card 2 (Blue Click Accent) -->
+                <div class="flavor-card blue-click" onclick="alert('You selected: Royal Chocolate Fudge!')">
+                    <h3>🍫 Royal Chocolate</h3>
+                    <p>Rich, decadent Belgian chocolate layers smothered in a smooth chocolate ganache frosting.</p>
+                </div>
+
+                <!-- Card 3 (Pink Click Accent) -->
+                <div class="flavor-card pink-click" onclick="alert('You selected: Velvet Red Velvet!')">
+                    <h3>🧁 Classic Red Velvet</h3>
+                    <p>Traditional deep red cocoa cake paired beautifully with our signature tangy cream cheese frosting.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Order Now</h2>
+            <p>Ready to bring sweetness to your celebration? Give us a call or tap below to dial directly!</p>
+            <p><strong>Phone Number:</strong> +1 (555) 123-4567</p>
+            <a href="tel:+15551234567" class="btn-contact">📞 Call to Place Order</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sweet Delights Cake Shop. Built with love.</p>
+    </footer>
+
+</body>
+</html>
